@@ -1,0 +1,17 @@
+<footer class="footer">
+    <div class="copyright">
+        &copy;
+        {{ with .Site.Params.since }}
+        <span itemprop="copyrightYear">{{.}} – {{ now.Year }}</span>
+        {{ end }}
+         {{ if .Site.Params.author }}
+            <span class="author" itemprop="copyrightHolder"><a href="{{ .Site.BaseURL }}">{{ .Site.Params.author  }}</a> | </span>
+
+         {{ end }}
+		  <span>Crafted with <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a>
+              | How? Check it <a href="https://github.com/bwplotka/my" target="_blank" rel="external nofollow noopener noreffer">here!</a> </span>
+    </div>
+</footer>
+
+{{ partial "js.html" . }}
+{{ template "_internal/google_analytics_async.html" . }}
