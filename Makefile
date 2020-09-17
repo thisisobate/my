@@ -1,5 +1,5 @@
 WEB_DIR           ?= web
-WEBSITE_BASE_URL  ?= https://obate.netlify.app/
+WEBSITE_BASE_URL  ?= https://obate.dev/
 
 # 0.55.3
 HUGO              ?= $(shell which hugo)
