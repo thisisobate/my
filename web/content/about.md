@@ -4,7 +4,7 @@ date: "2020-09-16"
 aliases: ["about","uchechukwu obasi","author","contact"]
 ---
 
-<img src="/images/uche_obasi.jpg" class="featured_image">
+<img src="/images/uche_obasi.jpg">
 
 Hi! 👋
 
