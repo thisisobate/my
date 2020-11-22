@@ -33,7 +33,7 @@ menu:
     weight: 2
 
 params:
-  since: 2019
+  since: 2020
   author: "Uchechukwu Obasi"
   avatar: "/images/uche_obasi.jpg"
   socialShare: true
@@ -58,15 +58,15 @@ author:
     publisher:
       name: "thisisobate"
       logo:
-        url: "/images/profile.jpg"
+        url: "/images/uche_obasi.jpg"
         width: 127
         height: 40
     logo:
-      url: "/images/profile.jpg"
+      url: "/images/uche_obasi.jpg"
       width: 127
       height: 40
     image:
-      url: "/images/profile.jpg"
+      url: "/images/uche_obasi.jpg"
       width: 127
       height: 40
 
