@@ -25,15 +25,18 @@ with the advent of wsl on windows, users now have the capability of running linu
 **Set up process**     
 **Dependencies**
 - Download and set up WSL on your windows machine
-- setup go locally using gvm- ensure you have the latest go binary installed     
+- setup go locally using gvm- ensure you have the latest go binary installed  
+
 **Download**
 - open up terminal 
-- clone grafana into a directory-please know the environment you cloned into: linux? or windows     
+- clone grafana into a directory-please know the environment you cloned into: linux? or windows    
+
 **Run Grafana**
 - open up terminal and run `make run` to start the backend
 - open another terminal and run `make run-frontend` to start the frontend
 - visit `localhost:3000` on browser to login-username and password: admin     
-**Run datasoources**
+
+**Adding datasources**
 - navigate to the `devenv` directory and kick-start data sources by running `/setup.sh` script
 - reload the site and find list of different data sources
 - Download and install Docker
@@ -47,7 +50,7 @@ Dependencies at Grafana on a windows PC works comes in two different dimensions:
 Linux Runtime environment: It is important to note that for Grafana to run locally on a windows machine, it has to depend on a linux environment. Fortunately enough, windows now have a feature that allow us to run linux on windows 10 PC.
 The Windows Subsystem for Linux (WSL) is a new Windows 10 feature that enables you to run native Linux command-line tools directly on Windows, alongside your traditional Windows desktop and modern store apps. 
 
-**download WSL**
+**WSL**
 In order for grafana and docker to run effectively on your machine, you need to install WSL 2.
 Thankfully, Microsoft has a well-documented installation guide which you can follow through.
 Please check it out [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
@@ -62,5 +65,37 @@ There are a few necessary dependencies which you need to install inorder to get 
 - Yarn (`npm install -g yarn`).
 
 # Downloading Grafana
+To download grafana on your windows machine, open your terminal and navigate to your desired directory. As a best practice, I normally clone all my software projects into one central directory- Would be writing more on this topic soon. Run `git clone https://github.com/grafana/grafana.git`. This command downloads Grafana to a new `grafana` directory in your current directory. Navigate to the `grafana` directory by running `cd grafana`. Open the grafana directory in your favorite code editor - if you're using vscode, run `code .` to open grafana in vscode.
+
+**Please Note: Do not use `go get` to download Grafana. Recent versions of Go have added behavior which isn't compatible with the way the Grafana repository is structured.**
+
+# Run Grafana
+Grafana comprises of two major parts: the frontend and the backend. To completely run the grafana aaplication on your machine, it's important you start up both the frontend and the backend. To achieve that, navigate to your terminal and start the backend by running `make run`. Please note that you can as well start the frontend before the backend.
+## Frontend
+Before we can build the frontend assets, we need to install the dependencies. Open another different terminal, navigate to the grafana directory, and run:
+
+`yarn install --pure-lockfile`     
+
+After the command has finished, we can start building our source code:
+
+`yarn start`
+
+Grafana is going to be served on http://localhost:3000. You will see the login page. Default credentials are:
+```
+username: admin
+password: admin
+
+```
+
+![Grafana login page](../../static/images/blog/grafana-login.png)
+
+When you log in for the first time you will be asked to change your password. You can decide to skip that page if you want.
+
+## Tests
+Run tests using `yarn test`
+```yarn test
+```
+# Adding datasources
+
 
 Thanks for reading! 🤗
