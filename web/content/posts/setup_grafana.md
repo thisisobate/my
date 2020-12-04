@@ -12,17 +12,18 @@ categories:
 - observability
 - setup
 images:
-- "/images/blog/grafana_labs.png"
-featuredImage: "/images/blog/grafana_labs.png"
+- "/images/blog/windows-10.png"
+featuredImage: "/images/blog/windows-10.png.png"
 ---
 
-**PS: In case you are using a mac, please refer to [Ivana's](https://medium.com/@ivanahuckova/how-to-contribute-to-grafana-as-junior-dev-c01fe3064502) post on setting up grafana on a mac.**
+> **In case you are using a mac, please refer to [Ivana's](https://medium.com/@ivanahuckova/how-to-contribute-to-grafana-as-junior-dev-c01fe3064502) post on setting up grafana on a mac.**
 
-Setting up and running grafana on a windows PC is quite tricky.
+Setting up and running Grafana on a windows PC is quite tricky.
 
-with the advent of wsl on windows, users now have the capability of running linux on a windows environment.
+With the advent of [WSL](https://docs.microsoft.com/en-us/windows/wsl/about) on windows, users now have the capability of running linux on a windows environment.
 
-**Set up process**     
+**TL/DR**     
+
 **Dependencies**
 - Download and set up WSL on your windows machine
 - setup go locally using gvm- ensure you have the latest go binary installed  
@@ -42,20 +43,25 @@ with the advent of wsl on windows, users now have the capability of running linu
 - Download and install Docker
 - Run `make devenv sources=influxdb,loki` to add datasources and start up their databases. 
 
-# Dependencies
-Dependencies at Grafana on a windows PC works comes in two different dimensions:
-1. Development (Dev) dependencies
-2. Linux runtime environment
+> **NOTE: To get the latest, up to date information on Grafana's setup process, do checkout [README](https://github.com/grafana/grafana/blob/master/contribute/developer-guide.md) on github.**
 
-Linux Runtime environment: It is important to note that for Grafana to run locally on a windows machine, it has to depend on a linux environment. Fortunately enough, windows now have a feature that allow us to run linux on windows 10 PC.
+# Dependencies
+Dependencies in Grafana, on a windows PC, comes in two different dimensions:
+1. Linux runtime environment (WSL).
+2. Development (Dev) dependencies.
+
+## Linux Runtime environment
+
+It is important to note that for Grafana to run locally on a windows machine, it has to depend on a linux environment. Fortunately enough, windows now have a feature that allow us to run linux on windows 10 PC.
 The Windows Subsystem for Linux (WSL) is a new Windows 10 feature that enables you to run native Linux command-line tools directly on Windows, alongside your traditional Windows desktop and modern store apps. 
 
-**WSL**
-In order for grafana and docker to run effectively on your machine, you need to install WSL 2.
+In order for grafana and docker to run effectively on your machine, you need to install **WSL**.
 Thankfully, Microsoft has a well-documented installation guide which you can follow through.
 Please check it out [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 
-Dev dependency: Before you start installing dev dependencies, please note that you should have WSL and a linux distro already set up on your machine. It is advisable to use the linux terminal for installing development dpendencies.  
+## Dev dependency
+
+Before you start installing dev dependencies, please note that you should have WSL and a linux distro already set up on your machine. It is advisable to use the linux terminal for installing development dpendencies.  
 
 Because windows 10 have both windows and linux environment running concurrenty, one might make the mistake of installing a dependency in one environment, and try accessing it from another different environment. This is a major issue most windows users face wjile setting up their working environments and so, it is advisable to always use the Linux environment (WSL) for any kind of application/software development work.   
 
@@ -70,7 +76,11 @@ To download grafana on your windows machine, open your terminal and navigate to 
 **Please Note: Do not use `go get` to download Grafana. Recent versions of Go have added behavior which isn't compatible with the way the Grafana repository is structured.**
 
 # Run Grafana
-Grafana comprises of two major parts: the frontend and the backend. To completely run the grafana aaplication on your machine, it's important you start up both the frontend and the backend. To achieve that, navigate to your terminal and start the backend by running `make run`. Please note that you can as well start the frontend before the backend.
+Grafana comprises of two major parts: the frontend and the backend. To completely run the grafana aaplication on your machine, it's important you start up both the frontend and the backend. 
+
+## Backend
+Navigate to your terminal and start the backend web server by running `make run`. Please note that you can as well start the frontend before the backend.
+
 ## Frontend
 Before we can build the frontend assets, we need to install the dependencies. Open another different terminal, navigate to the grafana directory, and run:
 
@@ -93,9 +103,37 @@ When you log in for the first time you will be asked to change your password. Yo
 
 ## Tests
 Run tests using `yarn test`
-```yarn test
+```
+yarn test
+
 ```
 # Adding datasources
+Luckily for all developers and contributors, you can easily add datasources and run corresponding databases. You can find the documentation here, but I will still walk you thought it and add some additional information.
+As a first step, you need to change your directory to devenv.    
+``` 
+cd devenv
 
+```
+In devenv, you need to run bash command `./setup.sh`. This means, that running `./setup.sh` will execute this script (any executable bash script can be run by preceding it with ./) and it will setup a couple of datasources and dashboards in your Grafana. Datasources will be named **gdev-<type>** and dashboard folder will be named **gdev dashboards**. After running this command in terminal, don't forget to restart grafana server (backend). You should then be able to see the changes.
+
+```
+./setup.sh
+
+```
+If you want to run databases for those datasources, you are going to need Docker. You can install Docker Hub (containing Docker Engine, Docker CLI client, Docker Compose, Docker Machine, and Kitematic) via its [official site](https://docs.docker.com/docker-for-windows/install/). Installation is pretty straight forward. As soon as you are up and running with Docker, you can follow with next steps.
+
+Firstly, get back to grafana directory from devenv.
+```
+cd ..
+
+```
+Secondly, you are going to run make command.
+```
+make devenv sources=influxdb,loki
+
+```
+This command will create a docker compose file with specified databases configured and ready to run. Just run the command, restart Grafana server, and you should see the added datasources.
+
+You can as well find the list of all available databases in **grafana/devenv/docker/blocks**.
 
 Thanks for reading! 🤗
