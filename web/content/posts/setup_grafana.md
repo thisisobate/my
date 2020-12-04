@@ -2,18 +2,18 @@
 authors:
 - name: "Uchechukwu Obasi"
 date: 2020-11-22
-linktitle: Getting Started With Grafana On A Windows Machine.
+linktitle: Getting Started With Grafana On A Windows 10 PC.
 type:
 - post 
 - posts
-title: Getting Started With Grafana On A Windows Machine.
+title: Getting Started With Grafana On A Windows 10 PC.
 weight: 1
 categories:
 - observability
 - setup
 images:
-- "/images/blog/windows-10.png"
-featuredImage: "/images/blog/windows-10.png.png"
+- "../..static/images/blog/windows-10.png"
+featuredImage: "../..static/images/blog/windows-10.png"
 ---
 
 > **In case you are using a mac, please refer to [Ivana's](https://medium.com/@ivanahuckova/how-to-contribute-to-grafana-as-junior-dev-c01fe3064502) post on setting up grafana on a mac.**
