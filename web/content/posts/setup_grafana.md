@@ -2,11 +2,11 @@
 authors:
 - name: "Uchechukwu Obasi"
 date: 2020-11-22
-linktitle: Getting Started With Grafana On A Windows 10 PC.
+linktitle: Setting up Grafana Development Environment on a Windows 10 PC.
 type:
 - post 
 - posts
-title: Getting Started With Grafana On A Windows 10 PC.
+title: Setting up Grafana Development Environment on a Windows 10 PC.
 weight: 1
 categories:
 - observability
