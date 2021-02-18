@@ -11,6 +11,7 @@ weight: 1
 categories:
   - version control
   - technical
+  - open source
 ---
 
 It's one thing to write code, it's another thing to get it merged to upstream. I've been creating a lot of pull request lately and I've beginning to notice some patterns to the code reviews I get all the time. I noticed that I make some mistakes which always comes up during code reviews and repeating them would make it a bad habit for me. Together, I and my manager decided to create a checklist that will allow me craft out a good pull request.
