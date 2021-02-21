@@ -21,7 +21,7 @@ featuredImage: "/images/blog/git-push-force-not-how-it-works.jpg"
 
 Force pushing isn't always the best- you rewrite commit history which isn't a good thing. Although in some severe cases, you're left with no other option than to force push your changes to remote. When you perform more complex operations, for example, squash commits, reset or rebase your branch, you must force an update to the remote branch. These operations imply rewriting the commit history of the branch.
 
-In the case of creating pull request, these are the processes I recommend you follow as an alternative to force pushing.
+In the case of creating pull request, this is the process I recommend you follow as an alternative to force pushing.
 
 # Checkout to your default branch
 
