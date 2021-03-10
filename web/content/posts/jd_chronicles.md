@@ -1,7 +1,7 @@
 ---
 authors:
   - name: "Uchechukwu Obasi"
-date: 2021-03-09
+date: 2021-03-10
 linktitle: "Junior engineer chronicles ep 1"
 type:
   - post
