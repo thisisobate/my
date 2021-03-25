@@ -40,7 +40,7 @@ I find it very difficult to pay a very close attention to tiny details. In fact,
 
 # Know your limit
 
-My mentor, [Hugo haggmark](https://www.hugohaggmark.com/), taught me a productivity technique known as work in progress limit. In agile development, work in progress (WIP) limits set the maximum amount of work that can exist in each status of a workflow. Implementing WIP limits allows you to complete single work items faster by helping your team focus only on current tasks. I've realised that I can only focus on one single task at a time, thus, I set my WIP limit to just one. Ever since I started putting this technique into practice, I have seen some tremendous progress in my day to day work, as well as my life generally. This has drastically reduced the amount of context switches that I do everyday. Tiny changes, remarkable results.
+My mentor, [Hugo Häggmark](https://www.hugohaggmark.com/), taught me a productivity technique known as work in progress limit. In agile development, work in progress (WIP) limits set the maximum amount of work that can exist in each status of a workflow. Implementing WIP limits allows you to complete single work items faster by helping your team focus only on current tasks. I've realised that I can only focus on one single task at a time, thus, I set my WIP limit to just one. Ever since I started putting this technique into practice, I have seen some tremendous progress in my day to day work, as well as my life generally. This has drastically reduced the amount of context switches that I do everyday. Tiny changes, remarkable results.
 
 # Imposter syndrome is killing me
 
