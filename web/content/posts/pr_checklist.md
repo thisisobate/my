@@ -38,7 +38,7 @@ I used to force push my changes all the time. I began to notice that force pushi
 
 # Double check variables- good naming is key
 
-Nmaing is hard. Good naming takes alot of time and effort but trust me, it's worth the extra stress.
+Naming is hard. Good naming takes alot of time and effort but trust me, it's worth the extra stress.
 
 # Implement the DRY principle- abstract, compose, and reuse code as much as possible
 
