@@ -6,7 +6,7 @@ linktitle: Junior engineer chronicles ep 2.
 type:
   - post
   - posts
-title: "Junior Engineer Chronicles: Episode 2".
+title: "Junior Engineer Chronicles: Episode 2"
 weight: 1
 categories:
   - Career
