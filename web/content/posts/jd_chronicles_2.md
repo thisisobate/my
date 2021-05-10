@@ -11,6 +11,9 @@ weight: 1
 categories:
   - Career
   - Life
+images:
+  - "/images/blog/hiking_journey.jpg"
+featuredImage: "/images/blog/hiking_journey.jpg"
 ---
 
 Hey peeps, It's been a while and I missed y'all for reals! Excited to be back on another episode of the Junior engineer chronicles! It's been two months since I published my first episode and alot has changed ever since! Join me on this trail as I share my learnings and growth with y'all.
