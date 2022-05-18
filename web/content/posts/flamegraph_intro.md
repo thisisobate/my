@@ -16,7 +16,7 @@ categories:
 tags: [observability, flamegraphs, profiling, go]
 ---
 
-
+> **Note: This is a guest blog originally published on the Pyroscope website.**
 
 ### Introduction
 In this article, I will introduce you to flamegraphs, how to use them, how to read them, what makes them unique, and their use cases.
