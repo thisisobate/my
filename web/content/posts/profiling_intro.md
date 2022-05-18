@@ -2,7 +2,9 @@
 title: What is continuous profiling?
 description: An introductory guide to continuous profiling
 sidebar_label: What is continuous profiling
-image: https://user-images.githubusercontent.com/29557702/165561093-4d5ec6a4-f527-4d5a-8733-79f1c56dd7bb.png
+images: 
+    - https://user-images.githubusercontent.com/29557702/165561093-4d5ec6a4-f527-4d5a-8733-79f1c56dd7bb.png
+featuredImage: https://user-images.githubusercontent.com/29557702/165561093-4d5ec6a4-f527-4d5a-8733-79f1c56dd7bb.png
 slug: /what-is-continuous-profiling
 date: "2022-04-27"
 
