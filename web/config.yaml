@@ -5,7 +5,7 @@ theme: "KeepIt"
 publishDir: "public"
 
 enableRobotsTXT: true
-googleAnalytics: "UA-138305173-1"
+googleAnalytics: "G-240P1M22G1"
 
 sitemap:
   changefreq: "monthly"
