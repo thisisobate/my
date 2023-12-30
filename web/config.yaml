@@ -46,13 +46,12 @@ params:
     GitHub: "thisisobate"
     Linkedin: "thisisobate"
     Twitter: "thisisobate"
-    YouTube: "@thisisobate"
+    Youtubechannel: "@thisisobate"
     Email: "obasiuche62@gmail.com"
   share:
     Twitter: true
     Facebook: true
     Linkedin: true
-    YouTube: true
 
 author:
   name: "@thisisobate"
