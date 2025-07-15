@@ -5,7 +5,6 @@ theme: "KeepIt"
 publishDir: "public"
 
 enableRobotsTXT: true
-googleAnalytics: "G-240P1M22G1"
 
 sitemap:
   changefreq: "monthly"

@@ -38,6 +38,16 @@
   {{- template "_internal/twitter_cards.html" . }}
   {{ partial "seo_schema" . }}
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-240P1M22G1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-240P1M22G1');
+</script>
+{{- /* Set CDN URL if in production */ -}}
 {{ $cdn_url := ""}}
   {{ if eq ( getenv "HUGO_ENV" ) "production" }}
           {{ with .Site.Params.cdn_url }}
