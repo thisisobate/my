@@ -2,3 +2,4 @@
 bin
 web/public
 web/resources/_gen
+web/.hugo_build.lock
