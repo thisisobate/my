@@ -1,7 +1,7 @@
 WEB_DIR           ?= web
 WEBSITE_BASE_URL  ?= https://ucheobasi.com/
 
-# 0.55.3
+# 0.55.6
 HUGO              ?= $(shell which hugo)
 ME				  ?= $(shell whoami)
 
@@ -40,5 +40,5 @@ web-serve: $(HUGO)
 # non-phony targets
 
 $(HUGO):
-	@echo "Install hugo, preferably in v0.54.0 version: https://gohugo.io/getting-started/installing/"
+    @echo "Install hugo, preferably in v0.55.6 version: https://gohugo.io/getting-started/installing/"
 
