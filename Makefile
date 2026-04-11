@@ -1,7 +1,7 @@
 WEB_DIR           ?= web
 WEBSITE_BASE_URL  ?= https://ucheobasi.com/
 
-# 0.55.3
+# 0.119.0
 HUGO              ?= $(shell which hugo)
 ME				  ?= $(shell whoami)
 
@@ -31,14 +31,14 @@ endef
 web: $(HUGO)
 	@echo ">> building documentation website"
 	# TODO(bwplotka): Make it --gc
-	@cd $(WEB_DIR) && HUGO_ENV=production $(HUGO) --minify -v --config config.yaml -b $(WEBSITE_BASE_URL)
+	@cd $(WEB_DIR) && HUGO_ENV=production $(HUGO) --minify --logLevel info --config config.yaml -b $(WEBSITE_BASE_URL)
 
 web-serve: $(HUGO)
 	@echo ">> serving documentation website"
-	@cd $(WEB_DIR) && $(HUGO) --config config.yaml -v server
+	@cd $(WEB_DIR) && $(HUGO) --config config.yaml --logLevel info server
 
 # non-phony targets
 
 $(HUGO):
-	@echo "Install hugo, preferably in v0.54.0 version: https://gohugo.io/getting-started/installing/"
+	@echo "Install hugo, preferably in v0.119.0 version: https://gohugo.io/getting-started/installing/"
 
