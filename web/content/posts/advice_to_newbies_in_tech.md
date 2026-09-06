@@ -6,7 +6,7 @@ linktitle: My advice to newbies in tech
 type:
   - post
   - posts
-title: Advice 
+title: My Advice to Tech Newbies in this new age of AI
 weight: 1
 categories:
   - Tech
